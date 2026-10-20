@@ -99,10 +99,14 @@ Env overrides for quick experiments: `HERMES_CACHE_ENGINE_MODE=enforce`, `HERMES
 ## Development
 
 ```bash
-python -m unittest discover -s tests -v
+make test          # or: python3 -m unittest discover -s tests -v
 ```
 
-Ten tests, no dependencies beyond the standard library. CI runs them on Python 3.10–3.12.
+Ten tests, no dependencies beyond the standard library (Python 3.10+).
+
+> CI note: the GitHub Actions workflow was removed because the repository owner's
+> account is billing-locked for Actions. Re-add `.github/workflows/ci.yml` (single job,
+> `python -m unittest discover -s tests -v`) once that is resolved.
 
 ---
 
