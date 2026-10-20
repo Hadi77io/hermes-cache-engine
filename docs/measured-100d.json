@@ -1,20 +1,20 @@
 {
-  "days": 100.0,
+  "days": 78.0,
   "traffic": {
-    "calls": 1431,
-    "inp": 330015811,
-    "cache": 4090591270,
-    "out": 28958842,
-    "apis": 34877
+    "calls": 1432,
+    "inp": 330266171,
+    "cache": 4095758630,
+    "out": 28987768,
+    "apis": 34921
   },
   "clip": {
-    "chars": 95382279,
-    "tokens_before": 31777882,
-    "tokens_saved": 14043381,
-    "clipped_calls": 5515,
-    "calls": 49829,
-    "median_us": 0.5610054358839989,
-    "elapsed_s": 0.13251352158840746
+    "chars": 95423083,
+    "tokens_before": 31791471,
+    "tokens_saved": 14043454,
+    "clipped_calls": 5516,
+    "calls": 49875,
+    "median_us": 0.8610077202320099,
+    "elapsed_s": 0.1972018656670116
   },
   "per_tool": {
     "skill_view": {
@@ -26,11 +26,11 @@
       "tokens_saved": 4373072
     },
     "terminal": {
-      "calls": 16988,
-      "chars": 19454823,
+      "calls": 17019,
+      "chars": 19478559,
       "clipped": 1042,
       "chars_kept": 3815740,
-      "tokens_before": 6479548,
+      "tokens_before": 6487452,
       "tokens_saved": 1669946
     },
     "memory": {
@@ -58,19 +58,19 @@
       "tokens_saved": 32601
     },
     "execute_code": {
-      "calls": 18256,
-      "chars": 21341134,
+      "calls": 18264,
+      "chars": 21348246,
       "clipped": 1134,
       "chars_kept": 4152426,
-      "tokens_before": 7107690,
+      "tokens_before": 7110058,
       "tokens_saved": 1430123
     },
     "write_file": {
-      "calls": 2158,
-      "chars": 520528,
+      "calls": 2161,
+      "chars": 521350,
       "clipped": 0,
       "chars_kept": 0,
-      "tokens_before": 172768,
+      "tokens_before": 173041,
       "tokens_saved": 0
     },
     "patch": {
@@ -186,12 +186,12 @@
       "tokens_saved": 1030311
     },
     "browser_exec": {
-      "calls": 552,
-      "chars": 591528,
-      "clipped": 17,
-      "chars_kept": 62219,
-      "tokens_before": 196998,
-      "tokens_saved": 5189
+      "calls": 554,
+      "chars": 596174,
+      "clipped": 18,
+      "chars_kept": 65878,
+      "tokens_before": 198546,
+      "tokens_saved": 5262
     },
     "tool_search": {
       "calls": 88,
@@ -226,11 +226,11 @@
       "tokens_saved": 0
     },
     "vision_analyze": {
-      "calls": 350,
-      "chars": 506542,
+      "calls": 352,
+      "chars": 511030,
       "clipped": 28,
       "chars_kept": 102512,
-      "tokens_before": 168742,
+      "tokens_before": 170238,
       "tokens_saved": 12924
     },
     "mcp__honcho_memory__query_conclusions": {
@@ -804,7 +804,7 @@
   },
   "prefix": {
     "sessions": 917,
-    "prefix_messages": 85630,
+    "prefix_messages": 85790,
     "prefix_changed": 0
   },
   "usd_saved_fresh_input": 4.21

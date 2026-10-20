@@ -183,19 +183,23 @@ def main() -> int:
     m = measure_clipping(rows, settings)
     p = verify_prefix(conn, since, settings)
 
+    stamps = [r[0] for r in conn.execute(
+        "SELECT timestamp FROM messages WHERE role='tool' AND timestamp >= ?", (since,))]
+    span_days = (max(stamps) - min(stamps)) / 86400 if stamps else args.days
+
     dollars = m["tokens_saved"] / 1_000_000 * PRICE_IN_FRESH
     share = m["tokens_saved"] / t["inp"] * 100 if t["inp"] else 0.0
 
     if args.json:
         print(json.dumps({
-            "days": args.days, "traffic": t,
+            "days": round(span_days, 1), "traffic": t,
             "clip": {k: v for k, v in m.items() if k != "per_tool"},
             "per_tool": m["per_tool"], "prefix": p,
             "usd_saved_fresh_input": round(dollars, 2),
         }, indent=2, ensure_ascii=False))
         return 0
 
-    print(f"# Measured — last {args.days:g} days\n")
+    print(f"# Measured — {span_days:.0f} days of history (window: --days {args.days:g})\n")
     print(f"- API calls: **{t['apis']:,}** · sessions: {conn.execute('SELECT COUNT(*) FROM sessions WHERE started_at>=?', (since,)).fetchone()[0]:,}")
     print(f"- fresh input: **{fmt(t['inp'])}** tok · cache read **{fmt(t['cache'])}** "
           f"({t['cache']/(t['inp']+t['cache'] or 1)*100:.1f}%) · output {fmt(t['out'])} tok")

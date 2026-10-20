@@ -37,13 +37,13 @@ No dependencies. No core patches. Stdlib only, 13 tests.
 
 <img src="assets/savings.svg" alt="Measured token savings per tool" width="880">
 
-Real deployment, **100 days** of live traffic (34,877 API calls, 917 sessions, DeepSeek V4.1 Flash via OpenCode Go), replayed through the shipped defaults:
+Real deployment, the **full 78 days** of history in `state.db` (34,921 API calls, 917 sessions, DeepSeek V4.1 Flash via OpenCode Go), replayed through the shipped defaults:
 
 | | Value |
 |---|---|
-| Tool results analysed | **49,829** |
+| Tool results analysed | **49,875** |
 | Tool content | **95.4M chars** ≈ 31.8M tokens |
-| Results over their cap | 5,515 (**11%**) |
+| Results over their cap | 5,516 (**11%**) |
 | **Tokens never sent** | **14.0M — 44% of all tool content** |
 | Share of fresh input tokens | 4.3% |
 | Cached-prefix messages rewritten | **0 of 85,630** |
@@ -53,22 +53,22 @@ Real deployment, **100 days** of live traffic (34,877 API calls, 917 sessions, D
 |---|---|---|---|---|
 | `skill_view` | 932 | 15.8M | 4.4M | 83% |
 | `read_file` | 3,537 | 13.6M | 1.9M | 42% |
-| `terminal` | 16,988 | 19.5M | 1.7M | 26% |
+| `terminal` | 17,019 | 19.5M | 1.7M | 26% |
 | `session_search` | 320 | 5.2M | 1.5M | 85% |
-| `execute_code` | 18,256 | 21.3M | 1.4M | 20% |
+| `execute_code` | 18,264 | 21.3M | 1.4M | 20% |
 | `web_extract` | 502 | 4.3M | 1.0M | 71% |
 | `web_search` | 554 | 3.8M | 837k | 66% |
 | `search_files` | 1,776 | 3.2M | 328k | 31% |
 
 ### What that is worth
 
-Same 100 days, billed at DeepSeek V4.1 Flash list prices ($0.30 fresh input / $0.006 cache read / $1.20 output per million):
+That same window, billed at DeepSeek V4.1 Flash list prices ($0.30 fresh input / $0.006 cache read / $1.20 output per million):
 
 | bucket | tokens | cost | share |
 |---|---|---|---|
-| Fresh input (cache miss) | 330.0M | **$99.00** | **62.5%** |
-| Output | 29.0M | $34.75 | 22.0% |
-| Cache read (92.5% hit rate) | 4,090.6M | $24.54 | 15.5% |
+| Fresh input (cache miss) | 330.3M | **$99.08** | **62.5%** |
+| Output | 29.0M | $34.79 | 22.0% |
+| Cache read (92.5% hit rate) | 4,095.8M | $24.57 | 15.5% |
 
 The 14.0M tokens this plugin kept out of context are fresh-input tokens: **$4.21 saved** on this deployment. That number is small because DeepSeek input is cheap — the same 14.0M tokens cost **$35** at a $2.50/M input price, and the plugin is provider-agnostic.
 
@@ -216,7 +216,7 @@ The benchmark reads Hermes' `state.db` read-only, replays every real tool result
 - **التقليم:** رأس 60% + ذيل 40%، مع سطر مؤشر يحوي بصمة المحتوى وعدد التوكنات المحذوفة.
 - **الوضع الافتراضي `report`:** يقيس كم توكن كان سيوفر — بلا أي تغيير في السلوك.
 
-**قياس حقيقي (100 يوم، 34,877 نداء، 917 جلسة):**
+**قياس حقيقي (78 يوم كامل سجل الـstate.db، 34,877 نداء، 917 جلسة):**
 
 - 49,829 نتيجة أداة → **14.0 مليون توكن لم تُرسَل** = **44% من محتوى الأدوات**.
 - 11% فقط من النتائج تجاوزت السقف — وهي التي تحمل معظم الحجم.
