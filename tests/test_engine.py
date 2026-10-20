@@ -22,7 +22,7 @@ class EngineTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
 
-    def _payload(self, tool_body, mode):
+    def _request(self, tool_body):
         return {"messages": [
             {"role": "user", "content": "old"},
             {"role": "assistant", "content": "", "tool_calls": [
@@ -35,24 +35,44 @@ class EngineTests(unittest.TestCase):
         ]}
 
     def test_report_mode_changes_nothing(self):
-        payload = self._payload(big(), "report")
-        before = json.dumps(payload, sort_keys=True)
-        CacheEngine(settings(self.tmp, "report")).on_llm_request(payload)
-        self.assertEqual(before, json.dumps(payload, sort_keys=True))
+        request = self._request(big())
+        before = json.dumps(request, sort_keys=True)
+        result = CacheEngine(settings(self.tmp, "report")).on_llm_request(request=request)
+        self.assertIsNone(result)
+        self.assertEqual(before, json.dumps(request, sort_keys=True))
+
+    def test_enforce_returns_middleware_contract(self):
+        # The runner only honours {"request": {...}}; anything else is dropped silently.
+        result = CacheEngine(settings(self.tmp, "enforce")).on_llm_request(
+            request=self._request(big()))
+        self.assertIsInstance(result, dict)
+        self.assertIsInstance(result.get("request"), dict)
+        self.assertIsInstance(result["request"].get("messages"), list)
 
     def test_enforce_clips_only_after_last_user_message(self):
-        payload = self._payload(big(), "enforce")
-        CacheEngine(settings(self.tmp, "enforce")).on_llm_request(payload)
-        msgs = payload["messages"]
+        request = self._request(big())
+        result = CacheEngine(settings(self.tmp, "enforce")).on_llm_request(request=request)
+        msgs = result["request"]["messages"]
         self.assertEqual(msgs[2]["content"], "prefix body " * 10)  # cached prefix untouched
         self.assertIn("omitted", msgs[5]["content"])
         self.assertLess(len(msgs[5]["content"]), len(big()))
+        # the caller's own request object is never mutated
+        self.assertEqual(request["messages"][5]["content"], big())
 
     def test_stats_are_written(self):
-        payload = self._payload(big(), "report")
         engine = CacheEngine(settings(self.tmp, "report"))
-        engine.on_llm_request(payload)
+        engine.on_llm_request(request=self._request(big()))
         self.assertGreater(engine.total_saved(), 0)
+
+    def test_no_change_returns_none(self):
+        self.assertIsNone(
+            CacheEngine(settings(self.tmp, "enforce")).on_llm_request(
+                request={"messages": [{"role": "user", "content": "hi"}]}))
+
+    def test_ignores_foreign_payloads(self):
+        engine = CacheEngine(settings(self.tmp, "enforce"))
+        self.assertIsNone(engine.on_llm_request())
+        self.assertIsNone(engine.on_llm_request(request={"input": "not a chat payload"}))
 
     def test_mutable_boundary(self):
         msgs = [{"role": "user"}, {"role": "tool"}, {"role": "assistant"}]

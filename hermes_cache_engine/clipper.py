@@ -46,8 +46,8 @@ def clip(text: str, cap_tokens: int, head_ratio: float = 0.6,
 
     omitted = len(text) - head_chars - tail_chars
     pointer = (
-        f"\n\n… [{omitted:,} chars / ≈{int(omitted / max(0.5, chars_per_token)):,} tokens "
-        f"omitted · full: ccr:{fingerprint(text)}] …\n\n"
+        f"\n\n… [{omitted:,} chars / ≈{int(omitted / max(0.5, chars_per_token)):,} tok "
+        f"omitted · sha256:{fingerprint(text)}] …\n\n"
     )
     out = text[:head_chars] + pointer + text[-tail_chars:]
     return ClipResult(out, True, before, estimate_tokens(out, chars_per_token))

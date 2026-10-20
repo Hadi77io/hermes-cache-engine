@@ -1,5 +1,5 @@
 name: hermes-cache-engine
-version: 0.1.0
+version: 0.2.0
 description: "Context Economy Engine for Hermes: clips oversized tool results before they enter context, keeps the prompt prefix byte-stable so provider prompt caching keeps hitting, and reports exactly how many tokens it saved."
 author: "Hadi Aljurdi"
 license: MIT

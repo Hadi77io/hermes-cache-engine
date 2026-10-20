@@ -1,0 +1,811 @@
+{
+  "days": 100.0,
+  "traffic": {
+    "calls": 1431,
+    "inp": 330015811,
+    "cache": 4090591270,
+    "out": 28958842,
+    "apis": 34877
+  },
+  "clip": {
+    "chars": 95382279,
+    "tokens_before": 31777882,
+    "tokens_saved": 14043381,
+    "clipped_calls": 5515,
+    "calls": 49829,
+    "median_us": 0.5610054358839989,
+    "elapsed_s": 0.13251352158840746
+  },
+  "per_tool": {
+    "skill_view": {
+      "calls": 932,
+      "chars": 15791308,
+      "clipped": 651,
+      "chars_kept": 2385418,
+      "tokens_before": 5263428,
+      "tokens_saved": 4373072
+    },
+    "terminal": {
+      "calls": 16988,
+      "chars": 19454823,
+      "clipped": 1042,
+      "chars_kept": 3815740,
+      "tokens_before": 6479548,
+      "tokens_saved": 1669946
+    },
+    "memory": {
+      "calls": 624,
+      "chars": 1253014,
+      "clipped": 143,
+      "chars_kept": 523807,
+      "tokens_before": 417391,
+      "tokens_saved": 162663
+    },
+    "unknown": {
+      "calls": 12,
+      "chars": 3203,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 1064,
+      "tokens_saved": 0
+    },
+    "browser_navigate": {
+      "calls": 64,
+      "chars": 211393,
+      "clipped": 24,
+      "chars_kept": 87906,
+      "tokens_before": 70442,
+      "tokens_saved": 32601
+    },
+    "execute_code": {
+      "calls": 18256,
+      "chars": 21341134,
+      "clipped": 1134,
+      "chars_kept": 4152426,
+      "tokens_before": 7107690,
+      "tokens_saved": 1430123
+    },
+    "write_file": {
+      "calls": 2158,
+      "chars": 520528,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 172768,
+      "tokens_saved": 0
+    },
+    "patch": {
+      "calls": 1158,
+      "chars": 1229786,
+      "clipped": 23,
+      "chars_kept": 84224,
+      "tokens_before": 409575,
+      "tokens_saved": 20085
+    },
+    "process": {
+      "calls": 194,
+      "chars": 92528,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 30776,
+      "tokens_saved": 0
+    },
+    "browser_snapshot": {
+      "calls": 8,
+      "chars": 17842,
+      "clipped": 2,
+      "chars_kept": 7328,
+      "tokens_before": 5942,
+      "tokens_saved": 3440
+    },
+    "browser_get_images": {
+      "calls": 8,
+      "chars": 22291,
+      "clipped": 3,
+      "chars_kept": 10992,
+      "tokens_before": 7427,
+      "tokens_saved": 3624
+    },
+    "read_file": {
+      "calls": 3537,
+      "chars": 13581624,
+      "clipped": 1208,
+      "chars_kept": 4424247,
+      "tokens_before": 4526073,
+      "tokens_saved": 1895541
+    },
+    "search_files": {
+      "calls": 1776,
+      "chars": 3175374,
+      "clipped": 253,
+      "chars_kept": 926509,
+      "tokens_before": 1057951,
+      "tokens_saved": 327710
+    },
+    "cronjob": {
+      "calls": 366,
+      "chars": 838199,
+      "clipped": 34,
+      "chars_kept": 124590,
+      "tokens_before": 279303,
+      "tokens_saved": 181357
+    },
+    "clarify": {
+      "calls": 75,
+      "chars": 27934,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 9283,
+      "tokens_saved": 0
+    },
+    "session_search": {
+      "calls": 320,
+      "chars": 5184695,
+      "clipped": 200,
+      "chars_kept": 732980,
+      "tokens_before": 1728117,
+      "tokens_saved": 1466056
+    },
+    "browser_click": {
+      "calls": 3,
+      "chars": 1119,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 372,
+      "tokens_saved": 0
+    },
+    "skill_manage": {
+      "calls": 359,
+      "chars": 156435,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 52024,
+      "tokens_saved": 0
+    },
+    "todo": {
+      "calls": 75,
+      "chars": 39838,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 13256,
+      "tokens_saved": 0
+    },
+    "web_search": {
+      "calls": 554,
+      "chars": 3826180,
+      "clipped": 269,
+      "chars_kept": 985564,
+      "tokens_before": 1275174,
+      "tokens_saved": 836541
+    },
+    "web_extract": {
+      "calls": 502,
+      "chars": 4347732,
+      "clipped": 305,
+      "chars_kept": 1117444,
+      "tokens_before": 1449093,
+      "tokens_saved": 1030311
+    },
+    "browser_exec": {
+      "calls": 552,
+      "chars": 591528,
+      "clipped": 17,
+      "chars_kept": 62219,
+      "tokens_before": 196998,
+      "tokens_saved": 5189
+    },
+    "tool_search": {
+      "calls": 88,
+      "chars": 133360,
+      "clipped": 7,
+      "chars_kept": 25632,
+      "tokens_before": 44421,
+      "tokens_saved": 3938
+    },
+    "skills_list": {
+      "calls": 10,
+      "chars": 120186,
+      "clipped": 4,
+      "chars_kept": 14661,
+      "tokens_before": 40059,
+      "tokens_saved": 32161
+    },
+    "delegate_task": {
+      "calls": 8,
+      "chars": 17381,
+      "clipped": 3,
+      "chars_kept": 10978,
+      "tokens_before": 5792,
+      "tokens_saved": 308
+    },
+    "text_to_speech": {
+      "calls": 50,
+      "chars": 15993,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 5310,
+      "tokens_saved": 0
+    },
+    "vision_analyze": {
+      "calls": 350,
+      "chars": 506542,
+      "clipped": 28,
+      "chars_kept": 102512,
+      "tokens_before": 168742,
+      "tokens_saved": 12924
+    },
+    "mcp__honcho_memory__query_conclusions": {
+      "calls": 1,
+      "chars": 537,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 179,
+      "tokens_saved": 0
+    },
+    "tool_describe": {
+      "calls": 134,
+      "chars": 517039,
+      "clipped": 73,
+      "chars_kept": 267334,
+      "tokens_before": 172312,
+      "tokens_saved": 59107
+    },
+    "mcp__honcho_memory__search": {
+      "calls": 2,
+      "chars": 1054,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 350,
+      "tokens_saved": 0
+    },
+    "mcp__honcho_memory__list_workspaces": {
+      "calls": 1,
+      "chars": 482,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 160,
+      "tokens_saved": 0
+    },
+    "tool_call": {
+      "calls": 33,
+      "chars": 16217,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 5396,
+      "tokens_saved": 0
+    },
+    "mcp__context7__query_docs": {
+      "calls": 1,
+      "chars": 6635,
+      "clipped": 1,
+      "chars_kept": 3664,
+      "tokens_before": 2211,
+      "tokens_saved": 990
+    },
+    "process_manage": {
+      "calls": 324,
+      "chars": 309857,
+      "clipped": 6,
+      "chars_kept": 21984,
+      "tokens_before": 103187,
+      "tokens_saved": 15655
+    },
+    "memory_recall": {
+      "calls": 24,
+      "chars": 492421,
+      "clipped": 18,
+      "chars_kept": 65974,
+      "tokens_before": 164132,
+      "tokens_saved": 139182
+    },
+    "cronjob_manage": {
+      "calls": 62,
+      "chars": 666896,
+      "clipped": 10,
+      "chars_kept": 36660,
+      "tokens_before": 222278,
+      "tokens_saved": 185965
+    },
+    "browser_vault_list": {
+      "calls": 20,
+      "chars": 8130,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 2710,
+      "tokens_saved": 0
+    },
+    "browser_vault_save_login": {
+      "calls": 4,
+      "chars": 2263,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 753,
+      "tokens_saved": 0
+    },
+    "memory_save": {
+      "calls": 8,
+      "chars": 10175,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 3389,
+      "tokens_saved": 0
+    },
+    "mcp__agentdeals__get_newest_deals": {
+      "calls": 4,
+      "chars": 56301,
+      "clipped": 4,
+      "chars_kept": 14658,
+      "tokens_before": 18765,
+      "tokens_saved": 13881
+    },
+    "mcp__agentdeals__search_offers": {
+      "calls": 20,
+      "chars": 149650,
+      "clipped": 6,
+      "chars_kept": 21983,
+      "tokens_before": 49876,
+      "tokens_saved": 33482
+    },
+    "mcp__agentdeals__get_weekly_digest": {
+      "calls": 4,
+      "chars": 45073,
+      "clipped": 4,
+      "chars_kept": 14656,
+      "tokens_before": 15022,
+      "tokens_saved": 10138
+    },
+    "mcp__taaft__search_mcps": {
+      "calls": 2,
+      "chars": 3450,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 1149,
+      "tokens_saved": 0
+    },
+    "mcp__taaft__get_mcp": {
+      "calls": 1,
+      "chars": 1543,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 514,
+      "tokens_saved": 0
+    },
+    "mcp__apify__search_actors": {
+      "calls": 1,
+      "chars": 16635,
+      "clipped": 1,
+      "chars_kept": 3665,
+      "tokens_before": 5545,
+      "tokens_saved": 4324
+    },
+    "mcp__taaft__search_tools": {
+      "calls": 4,
+      "chars": 13649,
+      "clipped": 2,
+      "chars_kept": 7319,
+      "tokens_before": 4548,
+      "tokens_saved": 177
+    },
+    "mcp__apify__apify__rag_web_browser": {
+      "calls": 1,
+      "chars": 7156,
+      "clipped": 1,
+      "chars_kept": 3664,
+      "tokens_before": 2385,
+      "tokens_saved": 1164
+    },
+    "mcp__taaft__get_tool": {
+      "calls": 3,
+      "chars": 10097,
+      "clipped": 2,
+      "chars_kept": 7318,
+      "tokens_before": 3365,
+      "tokens_saved": 136
+    },
+    "mcp__agentdeals__get_expiring_deals": {
+      "calls": 1,
+      "chars": 871,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 290,
+      "tokens_saved": 0
+    },
+    "kanban_show": {
+      "calls": 3,
+      "chars": 30248,
+      "clipped": 1,
+      "chars_kept": 3665,
+      "tokens_before": 10082,
+      "tokens_saved": 8138
+    },
+    "kanban_comment": {
+      "calls": 1,
+      "chars": 54,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 18,
+      "tokens_saved": 0
+    },
+    "kanban_complete": {
+      "calls": 2,
+      "chars": 1041,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 347,
+      "tokens_saved": 0
+    },
+    "kanban_attach_url": {
+      "calls": 1,
+      "chars": 134,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 44,
+      "tokens_saved": 0
+    },
+    "kanban_create": {
+      "calls": 1,
+      "chars": 168,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 56,
+      "tokens_saved": 0
+    },
+    "kanban_attachments": {
+      "calls": 1,
+      "chars": 959,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 319,
+      "tokens_saved": 0
+    },
+    "mcp__apify__apify__web_fetch": {
+      "calls": 3,
+      "chars": 14839,
+      "clipped": 2,
+      "chars_kept": 7324,
+      "tokens_before": 4946,
+      "tokens_saved": 1616
+    },
+    "mcp__apify__get_dataset_items": {
+      "calls": 5,
+      "chars": 16209,
+      "clipped": 1,
+      "chars_kept": 3662,
+      "tokens_before": 5400,
+      "tokens_saved": 853
+    },
+    "mcp__pumble__get_channel_messages": {
+      "calls": 2,
+      "chars": 6764,
+      "clipped": 1,
+      "chars_kept": 3659,
+      "tokens_before": 2254,
+      "tokens_saved": 80
+    },
+    "mcp__pumble__get_latest_messages": {
+      "calls": 3,
+      "chars": 16051,
+      "clipped": 2,
+      "chars_kept": 7328,
+      "tokens_before": 5350,
+      "tokens_saved": 2376
+    },
+    "mcp__pumble__send_message": {
+      "calls": 2,
+      "chars": 2148,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 715,
+      "tokens_saved": 0
+    },
+    "mcp__pumble__get_workspace_info": {
+      "calls": 1,
+      "chars": 505,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 168,
+      "tokens_saved": 0
+    },
+    "mcp__pumble__get_users": {
+      "calls": 1,
+      "chars": 3675,
+      "clipped": 1,
+      "chars_kept": 3658,
+      "tokens_before": 1225,
+      "tokens_saved": 6
+    },
+    "mcp__pumble__get_channels": {
+      "calls": 1,
+      "chars": 938,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 312,
+      "tokens_saved": 0
+    },
+    "memory_search": {
+      "calls": 19,
+      "chars": 12079,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 4021,
+      "tokens_saved": 0
+    },
+    "mcp__opengeni__opengeni_action_call": {
+      "calls": 2,
+      "chars": 2166,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 722,
+      "tokens_saved": 0
+    },
+    "mcp__opengeni__opengeni_actions_search": {
+      "calls": 1,
+      "chars": 1762,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 587,
+      "tokens_saved": 0
+    },
+    "mcp__apify__fetch_actor_details": {
+      "calls": 3,
+      "chars": 42301,
+      "clipped": 3,
+      "chars_kept": 10992,
+      "tokens_before": 14099,
+      "tokens_saved": 10437
+    },
+    "mcp__apify__call_actor": {
+      "calls": 8,
+      "chars": 32887,
+      "clipped": 3,
+      "chars_kept": 10988,
+      "tokens_before": 10961,
+      "tokens_saved": 3624
+    },
+    "mcp__apify__get_actor_run": {
+      "calls": 10,
+      "chars": 54673,
+      "clipped": 3,
+      "chars_kept": 10991,
+      "tokens_before": 18222,
+      "tokens_saved": 7432
+    },
+    "mcp__hostinger__search": {
+      "calls": 12,
+      "chars": 91100,
+      "clipped": 9,
+      "chars_kept": 32977,
+      "tokens_before": 30364,
+      "tokens_saved": 18472
+    },
+    "mcp__hostinger__execute": {
+      "calls": 11,
+      "chars": 6854,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 2280,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__search_domain": {
+      "calls": 5,
+      "chars": 2379,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 791,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__get_tld_price": {
+      "calls": 5,
+      "chars": 7572,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 2522,
+      "tokens_saved": 0
+    },
+    "mcp__jina__search_web": {
+      "calls": 3,
+      "chars": 10369,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 3455,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__list_domains": {
+      "calls": 2,
+      "chars": 974,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 324,
+      "tokens_saved": 0
+    },
+    "mcp__busabase__bases_list": {
+      "calls": 1,
+      "chars": 17135,
+      "clipped": 1,
+      "chars_kept": 3665,
+      "tokens_before": 5711,
+      "tokens_saved": 4490
+    },
+    "mcp__busabase__nodes_list": {
+      "calls": 1,
+      "chars": 7540,
+      "clipped": 1,
+      "chars_kept": 3664,
+      "tokens_before": 2513,
+      "tokens_saved": 1292
+    },
+    "mcp__busabase__node_files_list": {
+      "calls": 1,
+      "chars": 900,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 300,
+      "tokens_saved": 0
+    },
+    "mcp__busabase__records_list_page": {
+      "calls": 1,
+      "chars": 2342,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 780,
+      "tokens_saved": 0
+    },
+    "mcp__busabase__nodes_get": {
+      "calls": 1,
+      "chars": 8213,
+      "clipped": 1,
+      "chars_kept": 3664,
+      "tokens_before": 2737,
+      "tokens_saved": 1516
+    },
+    "mcp__busabase__records_group_by": {
+      "calls": 1,
+      "chars": 478,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 159,
+      "tokens_saved": 0
+    },
+    "mcp__jina__read_url": {
+      "calls": 1,
+      "chars": 1470,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 490,
+      "tokens_saved": 0
+    },
+    "manage_connections": {
+      "calls": 4,
+      "chars": 22926,
+      "clipped": 3,
+      "chars_kept": 10992,
+      "tokens_before": 7642,
+      "tokens_saved": 3927
+    },
+    "desktop_project": {
+      "calls": 1,
+      "chars": 35,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 11,
+      "tokens_saved": 0
+    },
+    "term</｜｜DSML｜｜ parameter>\n<｜｜DSML｜｜ parameter name=": {
+      "calls": 1,
+      "chars": 516,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 172,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__get_marketplace_listings": {
+      "calls": 1,
+      "chars": 466,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 155,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__get_account_info": {
+      "calls": 1,
+      "chars": 1833,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 611,
+      "tokens_saved": 0
+    },
+    "mcp__dynadot__check_processing": {
+      "calls": 1,
+      "chars": 455,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 151,
+      "tokens_saved": 0
+    },
+    "mcp__pomerado__find_website_tool": {
+      "calls": 4,
+      "chars": 8927,
+      "clipped": 1,
+      "chars_kept": 3659,
+      "tokens_before": 2973,
+      "tokens_saved": 57
+    },
+    "mcp__pomerado__list_logins": {
+      "calls": 1,
+      "chars": 398,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 132,
+      "tokens_saved": 0
+    },
+    "mcp__pomerado__search_pomerado_api": {
+      "calls": 2,
+      "chars": 19615,
+      "clipped": 1,
+      "chars_kept": 3665,
+      "tokens_before": 6538,
+      "tokens_saved": 5187
+    },
+    "mcp__pomerado__call_pomerado_api": {
+      "calls": 5,
+      "chars": 5371,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 1790,
+      "tokens_saved": 0
+    },
+    "mcp__pomerado__run_read_only_website_tool": {
+      "calls": 2,
+      "chars": 8458,
+      "clipped": 1,
+      "chars_kept": 3662,
+      "tokens_before": 2819,
+      "tokens_saved": 843
+    },
+    "image_generate": {
+      "calls": 1,
+      "chars": 152,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 50,
+      "tokens_saved": 0
+    },
+    "mcp__stitch__create_project": {
+      "calls": 1,
+      "chars": 524,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 174,
+      "tokens_saved": 0
+    },
+    "mcp__stitch__generate_screen_from_text": {
+      "calls": 3,
+      "chars": 73427,
+      "clipped": 2,
+      "chars_kept": 7332,
+      "tokens_before": 24474,
+      "tokens_saved": 21244
+    },
+    "mcp__stitch__list_screens": {
+      "calls": 1,
+      "chars": 16,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 5,
+      "tokens_saved": 0
+    },
+    "mcp__stitch__get_screen": {
+      "calls": 3,
+      "chars": 4132,
+      "clipped": 0,
+      "chars_kept": 0,
+      "tokens_before": 1376,
+      "tokens_saved": 0
+    }
+  },
+  "prefix": {
+    "sessions": 917,
+    "prefix_messages": 85630,
+    "prefix_changed": 0
+  },
+  "usd_saved_fresh_input": 4.21
+}

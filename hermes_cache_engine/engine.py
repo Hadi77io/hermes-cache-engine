@@ -1,4 +1,10 @@
-"""The middleware itself: clip only the mutable tail, never the cached prefix."""
+"""The middleware itself: clip only the mutable tail, never the cached prefix.
+
+Contract (``hermes_cli/middleware.py``): an ``llm_request`` callback is invoked
+with ``request=<provider kwargs>`` and may return ``{"request": <new kwargs>}``.
+Returning the request itself — or mutating it in place — is silently ignored by
+the middleware runner, which is the failure mode this plugin must not repeat.
+"""
 from __future__ import annotations
 
 import json
@@ -6,7 +12,7 @@ import os
 import time
 from typing import Any, Mapping
 
-from .clipper import clip, estimate_tokens
+from .clipper import clip
 from .config import Settings
 
 ROLE_TOOL = "tool"
@@ -47,7 +53,9 @@ class CacheEngine:
     def _log(self, record: Mapping[str, Any]) -> None:
         try:
             path = os.path.expanduser(self.settings.stats_path)
-            os.makedirs(os.path.dirname(path), exist_ok=True)
+            parent = os.path.dirname(path)
+            if parent:
+                os.makedirs(parent, exist_ok=True)
             with open(path, "a", encoding="utf-8") as handle:
                 handle.write(json.dumps(dict(record), ensure_ascii=False) + "\n")
         except Exception:
@@ -68,11 +76,17 @@ class CacheEngine:
         return total
 
     # ---- middleware ------------------------------------------------------
-    def on_llm_request(self, payload: Any, **kwargs: Any) -> Any:
-        """``llm_request`` middleware: measure, and optionally rewrite, tool results."""
-        messages = payload.get("messages") if isinstance(payload, Mapping) else None
+    def on_llm_request(self, request: Any = None, **kwargs: Any) -> Any:
+        """``llm_request`` middleware: measure, and optionally rewrite, tool results.
+
+        Returns ``{"request": ...}`` when something actually changed, ``None``
+        otherwise — the runner ignores every other return shape.
+        """
+        if not isinstance(request, Mapping):
+            return None
+        messages = request.get("messages")
         if not isinstance(messages, list) or not messages:
-            return payload
+            return None
 
         enforce = str(self.settings.mode).lower() == "enforce"
         names = _tool_names(messages)
@@ -80,8 +94,11 @@ class CacheEngine:
 
         saved_total = 0
         clipped_count = 0
-        for msg in messages[start:]:
-            if not isinstance(msg, dict) or msg.get("role") != ROLE_TOOL:
+        rewritten: list[Any] | None = None
+
+        for index in range(start, len(messages)):
+            msg = messages[index]
+            if not isinstance(msg, Mapping) or msg.get("role") != ROLE_TOOL:
                 continue
             body = msg.get("content")
             if not isinstance(body, str) or not body:
@@ -98,7 +115,9 @@ class CacheEngine:
             clipped_count += 1
             saved_total += result.saved
             if enforce:
-                msg["content"] = result.text
+                if rewritten is None:
+                    rewritten = list(messages)  # copy-on-first-write: prefix objects are shared
+                rewritten[index] = {**msg, "content": result.text}
 
         if clipped_count:
             self._log({
@@ -108,4 +127,7 @@ class CacheEngine:
                 "saved_tokens": saved_total,
                 "calls": len(messages),
             })
-        return payload
+
+        if rewritten is None:
+            return None
+        return {"request": {**request, "messages": rewritten}}

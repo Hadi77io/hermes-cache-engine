@@ -4,7 +4,7 @@ Safe by default: ``mode: report`` measures what could be saved and changes nothi
 Flip to ``mode: enforce`` once the numbers look right.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from .config import load_settings
 from .engine import CacheEngine

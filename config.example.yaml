@@ -4,13 +4,17 @@ plugins:
     - hermes-cache-engine
 
 cache_engine:
-  mode: report        # report = measure only (safe) | enforce = clip for real
-  default_cap: 1200   # tokens kept per tool result
-  hard_cap: 6000
-  head_ratio: 0.6     # 60% head + 40% tail
+  mode: report          # report = measure only (safe) | enforce = clip for real
+  default_cap: 1200     # tokens kept per tool result
+  hard_cap: 6000        # nothing is ever clipped above this
+  head_ratio: 0.6       # 60% head + 40% tail (errors live at the edges)
+  chars_per_token: 3.0  # conservative; measured corpus value is 3.36
+  stats_path: ~/.hermes/cache-engine/stats.jsonl
   per_tool:
     web_extract: 900
     skill_view: 900
     session_search: 900
     memory_recall: 900
     read_file: 2000
+    terminal: 1500
+    execute_code: 1500

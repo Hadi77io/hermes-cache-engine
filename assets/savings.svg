@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="452" viewBox="0 0 880 452" role="img" aria-label="Measured token savings per tool">
+  <defs>
+    <linearGradient id="head" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/><stop offset="100%" stop-color="#111a2b"/>
+    </linearGradient>
+  </defs>
+  <rect width="880" height="452" rx="18" fill="url(#card)"/>
+  <rect x="0" y="0" width="880" height="5" rx="2" fill="url(#head)"/>
+  <text x="40" y="52" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="20" font-weight="600" fill="#f8fafc">Measured on 49,829 real tool results</text>
+  <text x="40" y="78" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#94a3b8">100 days of live traffic · 5,515 results clipped (11%) · 14.0M tokens never sent</text>
+  <text x="40" y="98" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="12" fill="#64748b">share of each tool's own output bytes removed, estimated at 3 chars/token</text>
+
+  <g>
+    <text x="40" y="133" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">skill_view</text>
+    <rect x="210" y="118" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="118" width="470.0" height="20" rx="10" fill="#a78bfa" opacity="0.92"/>
+    <text x="696" y="133" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">83%<tspan fill="#64748b"> · 4373k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="167" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">read_file</text>
+    <rect x="210" y="152" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="152" width="203.7" height="20" rx="10" fill="#8b5cf6" opacity="0.92"/>
+    <text x="696" y="167" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">42%<tspan fill="#64748b"> · 1896k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="201" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">terminal</text>
+    <rect x="210" y="186" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="186" width="179.5" height="20" rx="10" fill="#7c3aed" opacity="0.92"/>
+    <text x="696" y="201" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">26%<tspan fill="#64748b"> · 1670k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="235" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">session_search</text>
+    <rect x="210" y="220" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="220" width="157.6" height="20" rx="10" fill="#22d3ee" opacity="0.92"/>
+    <text x="696" y="235" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">85%<tspan fill="#64748b"> · 1466k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="269" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">execute_code</text>
+    <rect x="210" y="254" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="254" width="153.7" height="20" rx="10" fill="#06b6d4" opacity="0.92"/>
+    <text x="696" y="269" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">20%<tspan fill="#64748b"> · 1430k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="303" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">web_extract</text>
+    <rect x="210" y="288" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="288" width="110.7" height="20" rx="10" fill="#38bdf8" opacity="0.92"/>
+    <text x="696" y="303" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">71%<tspan fill="#64748b"> · 1030k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="337" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">web_search</text>
+    <rect x="210" y="322" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="322" width="89.9" height="20" rx="10" fill="#818cf8" opacity="0.92"/>
+    <text x="696" y="337" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">66%<tspan fill="#64748b"> · 837k tok</tspan></text>
+  </g>
+  <g>
+    <text x="40" y="371" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#8b9dc3">search_files</text>
+    <rect x="210" y="356" width="470" height="20" rx="10" fill="#1b2437"/>
+    <rect x="210" y="356" width="35.2" height="20" rx="10" fill="#c084fc" opacity="0.92"/>
+    <text x="696" y="371" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="13" fill="#e2e8f0">31%<tspan fill="#64748b"> · 328k tok</tspan></text>
+  </g>
+  <text x="40" y="426" font-family="ui-sans-serif,-apple-system,Segoe UI,Roboto,Helvetica,Arial" font-size="12" fill="#64748b">bars = tokens saved · total 14.0M tok = 44% of all tool content</text>
+</svg>
